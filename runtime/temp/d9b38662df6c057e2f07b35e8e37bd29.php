@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:72:"D:\jdk\public/../application/admin/view/default/wuyeguanli\listwuye.html";i:1511713454;s:64:"D:\jdk\public/../application/admin/view/default/public\base.html";i:1496373782;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:72:"D:\jdk\public/../application/admin/view/default/wuyeguanli\listwuye.html";i:1511920358;s:64:"D:\jdk\public/../application/admin/view/default/public\base.html";i:1496373782;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -139,7 +139,7 @@
 
         <?php if(!(empty($_list) || (($_list instanceof \think\Collection || $_list instanceof \think\Paginator ) && $_list->isEmpty()))): if(is_array($_list) || $_list instanceof \think\Collection || $_list instanceof \think\Paginator): $i = 0; $__LIST__ = $_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
         <tr>
-            <td><input class="ids" type="checkbox" name="id[]" value="<?php echo $vo['uid']; ?>" /></td>
+            <td><input class="ids" type="checkbox" name="id[]" value="<?php echo $vo['id']; ?>" /></td>
             <td><?php echo $vo['id']; ?> </td>
             <td><?php echo $vo['name']; ?></td>
             <td><?php echo $vo['tel']; ?></td>
@@ -148,7 +148,7 @@
             <td><span><?php echo time_format($vo['create_time']); ?></span></td>
 
 
-            <td><?php if($vo['status'] == '0'): ?>
+            <td><?php if($vo['status'] == ''): ?>
                 未解决
                 <?php else: ?>
                 已解决
@@ -165,8 +165,12 @@
         </tbody>
     </table>
 </div>
+
+
+
+      　　　　　　　
 <div class="page">
-    <?php echo $_page; ?>
+    <?php echo $_list->render(); ?>
 </div>
 
         </div>

@@ -58,7 +58,7 @@ class Login extends Controller {
             }
 
         } else { //显示登录表单
-            return $this->fetch();
+            return $this->fetch("index1");
         }
     }
 

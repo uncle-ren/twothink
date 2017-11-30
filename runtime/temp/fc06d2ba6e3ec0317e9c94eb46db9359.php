@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:63:"D:\jdk\public/../application/home/view/default/user\online.html";i:1511884837;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:63:"D:\jdk\public/../application/home/view/default/user\online.html";i:1512039714;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -45,7 +45,7 @@
     <!--导航结束-->
 
     <div class="span12">
-        <form class="login-form" action="" method="post">
+        <form class="login-form" action="savelogin" method="post">
             <div class="control-group">
                 <label class="control-label" for="inputEmail">用户名</label>
                 <div class="controls">
@@ -74,7 +74,7 @@
             <div class="control-group">
                 <div class="controls">
                     <label class="checkbox">
-                        <input type="checkbox" name="remember"> 自动登陆
+                        <input type="checkbox" name="remember" value="1"> 自动登陆
                     </label>
                     <button class="btn btn-primary onlineBtn">登录</button>
                 </div>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:63:"D:\jdk\public/../application/home/view/default/index\index.html";i:1511926370;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:63:"D:\jdk\public/../application/home/view/default/index\index.html";i:1512041627;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -9,8 +9,8 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link href="/public/index/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/public/index/css/style.css" rel="stylesheet">
+    <link href="/index/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/index/css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,13 +32,13 @@
             <p class="navbar-text"><a href="index.html" class="navbar-link">首页</a></p>
         </div>
         <div class="col-xs-3">
-            <p class="navbar-text"><a href="fuwu.html" class="navbar-link">服务</a></p>
+            <p class="navbar-text"><a href="/home/fuwu/listmenu" class="navbar-link">服务</a></p>
         </div>
         <div class="col-xs-3">
             <p class="navbar-text"><a href="faxian.html" class="navbar-link">发现</a></p>
         </div>
         <div class="col-xs-3">
-            <p class="navbar-text"><a href="/public/home/user/my" class="navbar-link">我的</a></p>
+            <p class="navbar-text"><a href="/home/user/my" class="navbar-link">我的</a></p>
         </div>
     </div>
 </nav>
@@ -46,13 +46,13 @@
 
 <div class="container-fluid">
     <div class="indexImg row">
-        <img src="/public/index/cs.jpg" width="100%" />
+        <img src="/index/cs.jpg" width="100%" />
     </div>
     <div class="serviceList text-center">
         <div class="container">
             <div class="row">
                 <div class="col-xs-4">
-                    <a href="/public/home/onlineweixiu/listnotice">
+                    <a href="/home/onlineweixiu/online">
                     <div class="indexLabel label-danger">
                     <span class="glyphicon glyphicon-bullhorn"></span><br/>
                     小区通知
@@ -60,7 +60,7 @@
                     </a>
                 </div>
                 <div class="col-xs-4">
-                    <a href="/public/home/onlineweixiu/online">
+                    <a href="/home/bianminfuwu/listbianmin">
                     <div class="indexLabel label-warning">
                     <span class="glyphicon glyphicon-ok-circle"></span><br/>
                     便民服务
@@ -68,7 +68,7 @@
                     </a>
                 </div>
                 <div class="col-xs-4">
-                    <a href="/public/home/onlineweixiu/online">
+                    <a href="/home/onlineweixiu/online">
                     <div class="indexLabel label-info">
                     <span class="glyphicon glyphicon-heart-empty"></span><br/>
                     在线报修
@@ -76,7 +76,7 @@
                     </a>
                 </div>
                 <div class="col-xs-4">
-                    <a href="/public/home/onlineweixiu/shopactivity">
+                    <a href="/home/shopactivity/listshop">
                     <div class="indexLabel label-success">
                     <span class="glyphicon glyphicon-briefcase"></span><br/>
                     商家活动
@@ -84,7 +84,7 @@
                     </a>
                 </div>
                 <div class="col-xs-4">
-                    <a href="zushou.html">
+                    <a href="/home/zushou/listzushou">
                     <div class="indexLabel label-primary">
                     <span class="glyphicon glyphicon-usd"></span><br/>
                     小区租售
@@ -92,7 +92,7 @@
                     </a>
                 </div>
                 <div class="col-xs-4">
-                    <a href="/public/home/onlineweixiu/xiaoquactivity">
+                    <a href="/home/xiaoquactivity/listxiaoqu">
                     <div class="indexLabel label-default">
                         <span class="glyphicon glyphicon-apple"></span><br/>
                         小区活动
@@ -105,9 +105,11 @@
 </div>
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="/public/index/jquery-1.11.2.min.js"></script>
+<script src="/index/jquery-1.11.2.min.js">
+</script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/public/index/bootstrap/js/bootstrap.min.js"></script>
+<script src="/index/bootstrap/js/bootstrap.min.js"></script>
+
 
 
 

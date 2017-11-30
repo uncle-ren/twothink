@@ -42,7 +42,7 @@
 		<div class="fl">
 			<div class="btn-group">
 				{gt name="allow" value="0"}
-					<button class="btn document_add" {if condition="count($model) eq 1"}url="{:url('article/add',array('cate_id'=>$cate_id,'pid'=>input('pid',0),'model_id'=>$model[0],'group_id'=>$group_id))}"{/if}>新 增
+					<button class="btn document_add" {if condition="count($model) eq 1"} url="{:url('article/add',array('cate_id'=>$cate_id,'pid'=>input('pid',0),'model_id'=>$model[0],'group_id'=>$group_id))}"{/if}>新 增
 						{if condition="count($model) gt 1"}<i class="btn-arrowdown"></i>{/if}
 					</button>
 					{if condition="count($model) gt 1"}
@@ -68,8 +68,8 @@
 			<button class="btn ajax-post confirm" target-form="ids" url="{:url("Article/setStatus",array("status"=>-1,'cate_id'=>input('cate_id')))}">删 除</button>
 			<!-- <button class="btn document_add" url="{:url('article/batchOperate',array('cate_id'=>$cate_id,'pid'=>input('pid',0)))}">导入</button> -->
 			<button class="btn list_sort" url="{:url('sort',array('cate_id'=>$cate_id,'pid'=>input('pid',0)),'')}">排序</button>
-			<div class="btn-group"> 
-			    <a class="btn" href="{:url('recycle',['model_id'=>$model_id])}">回收站</a> 
+			<div class="btn-group">
+			    <a class="btn" href="{:url('recycle',['model_id'=>$model_id])}">回收站</a>
 			</div>
 		</div>
 

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:64:"D:\jdk\public/../application/user/view/default/login\index1.html";i:1511753119;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:64:"D:\jdk\public/../application/user/view/default/login\index1.html";i:1512057042;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -9,8 +9,8 @@
     <title>登录</title>
 
     <!-- Bootstrap -->
-    <link href="/public/index/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/public/index/css/style.css" rel="stylesheet">
+    <link href="/index/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/index/css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -88,40 +88,49 @@
 
 
 
-    <div class="container-fluid">
-        <form >
-            <div class="controls">
-                <input type="text" id="inputEmail" class="span3" placeholder="请输入用户名"  ajaxurl="/member/checkUserNameUnique.html" errormsg="请填写1-16位用户名" nullmsg="请填写用户名" datatype="*1-16" value="" name="username">
-            </div>
-            <div class="form-group">
-                <label>您的电话(必填):</label>
-                <input type="text" class="form-control" />
-            </div>
-            <div class="form-group">
-                <label>您的地址(必填):</label>
-                <input type="text" class="form-control" />
-            </div>
-            <div class="form-group">
-                <label>标题(必填):</label>
-                <input type="text" class="form-control" />
-            </div>
-            <div class="form-group">
-                <label>内容(详细描述需要报修的内容):</label>
-                <textarea type="text" class="form-control"></textarea>
-            </div>
-            <!--<div class="form-group">-->
-                <!--<div><a href="#"><span class="glyphicon glyphicon-plus onlineUpImg"></span></a></div>-->
-                <!--<label>图片(最多上传5张,可不上传):</label>-->
-            <!--</div>-->
-            <div class="form-group">
-                <button class="btn btn-primary onlineBtn">确认提交</button>
-            </div>
-        </form>
-    </div>
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="/public/index/jquery-1.11.2.min.js"></script>
+<script src="/index/jquery-1.11.2.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/public/index/bootstrap/js/bootstrap.min.js"></script>
+<script src="/index/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+    $(document)
+        .ajaxStart(function(){
+            $("button:submit").addClass("log-in").attr("disabled", true);
+        })
+        .ajaxStop(function(){
+            $("button:submit").removeClass("log-in").attr("disabled", false);
+        });
+
+
+    $("form").submit(function(){
+        var self = $(this);
+        $.post(self.attr("action"), self.serialize(), success, "json");
+        return false;
+
+        function success(data){
+            if(data.code){
+                window.location.href = data.url;
+            } else {
+                self.find(".Validform_checktip").text(data.msg);
+                //刷新验证码
+                $(".verifyimg img").click();
+            }
+        }
+    });
+
+    $(function(){
+        //刷新验证码
+        var verifyimg = $(".verifyimg img").attr("src");
+        $(".verifyimg img").click(function(){
+            if( verifyimg.indexOf('?')>0){
+                $(".verifyimg img").attr("src", verifyimg+'&random='+Math.random());
+            }else{
+                $(".verifyimg img").attr("src", verifyimg.replace(/\?.*$/,'')+'?'+Math.random());
+            }
+        });
+    });
+</script>
 </body>
 </html>

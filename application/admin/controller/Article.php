@@ -372,6 +372,7 @@ class Article extends Admin {
      * @author 艺品网络  <twothink.cn>
      */
     public function add(){
+        //echo 1;die;
         //获取左边菜单
         $this->getMenu();
 
@@ -409,7 +410,7 @@ class Article extends Admin {
         $this->assign('type_list',  get_type_bycate($cate_id));
         $this->assign('model',      $model);
         $this->assign('meta_title','新增'.$model['title']);
-        return $this->fetch();
+        return $this->fetch("add");
     }
 
     /**

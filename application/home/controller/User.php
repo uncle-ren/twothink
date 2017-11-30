@@ -20,7 +20,26 @@ class  User extends Home
         //echo 1; die;
         return $this->fetch('online');
     }
+    public   function savelogin(){
+        $this->success('登录成功！',url('index/index'));
+    }
 
+    Public function regist(){
+        //注册
+        return $this->fetch('register');
+    }
+    Public function save(){
 
+        //注册后的保存
+       // var_dump($_POST);die;
+        if($_POST["password"] != $_POST["repassword"]){
+            $this->error('两次输入密码不一致');
+        }
+        //var_dump($_POST);die;
+        unset($_POST["repassword"]);
+        unset($_POST["verify"]);
+        $this->save($_POST);
+
+    }
 
 }

@@ -76,7 +76,9 @@ class Category extends Admin{
         		return $this->error($validate->getError());
         	}
             if(false !== $Category->allowField(true)->save($data)){
-                $this->success('新增成功！', url('index'));
+                //添加成功  更新缓存
+                cache('sys_category_list', null);
+        	    $this->success('新增成功！', url('index'));
             } else {
                 $error = $Category->getError();
                 $this->error(empty($error) ? '未知错误！' : $error);

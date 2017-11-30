@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:62:"D:\jdk\public/../application/home/view/default/user\login.html";i:1511854101;s:63:"D:\jdk\public/../application/home/view/default/base\common.html";i:1496373782;s:60:"D:\jdk\public/../application/home/view/default/base\var.html";i:1496373782;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:62:"D:\jdk\public/../application/home/view/default/user\login.html";i:1511884757;s:63:"D:\jdk\public/../application/home/view/default/base\common.html";i:1496373782;s:60:"D:\jdk\public/../application/home/view/default/base\var.html";i:1496373782;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -191,7 +191,7 @@
             }else{
                 $(".verifyimg img").attr("src", verifyimg.replace(/\?.*$/,'')+'?'+Math.random());
             }
-        }); 
+        });
 		});
 	</script>
  <!-- 用于加载js代码 -->

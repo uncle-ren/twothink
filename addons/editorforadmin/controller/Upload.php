@@ -34,6 +34,7 @@ class Upload extends Addons{
                 $savename = $info->getFilename();
                 $fullpath= __ROOT__.$url.'/'.$savename;
                 $fullpath=str_replace('/\\','/',$fullpath);
+                $fullpath=str_replace('/public','',$fullpath);
                 $return[$key]['imgFile']['name']=$info->getInfo('name');//原文件名
                 $return[$key]['imgFile']['savepath']=$savepath;
                 $return[$key]['imgFile']['savename']=$savename;

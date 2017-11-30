@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:66:"D:\jdk\public/../application/admin/view/default/article\index.html";i:1496373782;s:64:"D:\jdk\public/../application/admin/view/default/public\base.html";i:1496373782;s:69:"D:\jdk\public/../application/admin/view/default/article\sidemenu.html";i:1496373782;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:66:"D:\jdk\public/../application/admin/view/default/article\index.html";i:1511940882;s:64:"D:\jdk\public/../application/admin/view/default/public\base.html";i:1496373782;s:69:"D:\jdk\public/../application/admin/view/default/article\sidemenu.html";i:1496373782;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -202,7 +202,7 @@
 		<div class="fl">
 			<div class="btn-group">
 				<?php if($allow > '0'): ?>
-					<button class="btn document_add" <?php if(count($model) == 1): ?>url="<?php echo url('article/add',array('cate_id'=>$cate_id,'pid'=>input('pid',0),'model_id'=>$model[0],'group_id'=>$group_id)); ?>"<?php endif; ?>>新 增
+					<button class="btn document_add" <?php if(count($model) == 1): ?> url="<?php echo url('article/add',array('cate_id'=>$cate_id,'pid'=>input('pid',0),'model_id'=>$model[0],'group_id'=>$group_id)); ?>"<?php endif; ?>>新 增
 						<?php if(count($model) > 1): ?><i class="btn-arrowdown"></i><?php endif; ?>
 					</button>
 					<?php if(count($model) > 1): ?>
@@ -227,8 +227,8 @@
 			<button class="btn ajax-post confirm" target-form="ids" url="<?php echo url("Article/setStatus",array("status"=>-1,'cate_id'=>input('cate_id'))); ?>">删 除</button>
 			<!-- <button class="btn document_add" url="<?php echo url('article/batchOperate',array('cate_id'=>$cate_id,'pid'=>input('pid',0))); ?>">导入</button> -->
 			<button class="btn list_sort" url="<?php echo url('sort',array('cate_id'=>$cate_id,'pid'=>input('pid',0)),''); ?>">排序</button>
-			<div class="btn-group"> 
-			    <a class="btn" href="<?php echo url('recycle',['model_id'=>$model_id]); ?>">回收站</a> 
+			<div class="btn-group">
+			    <a class="btn" href="<?php echo url('recycle',['model_id'=>$model_id]); ?>">回收站</a>
 			</div>
 		</div>
 

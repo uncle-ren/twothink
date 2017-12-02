@@ -75,7 +75,7 @@ class Publics extends Controller {
                 }
                 config($config);//添加配置
                 
-                return $this->fetch();
+                return $this->fetch("login");
             }
         }
     }

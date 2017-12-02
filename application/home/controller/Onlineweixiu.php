@@ -11,12 +11,17 @@ class  Onlineweixiu extends Home
 
     Public function online()
     {
-        request()->get();
-        //echo 1;die;
-        //在线提交订单
-        $repair = new Repairs();
+        //判断是否登录
+        if(is_login()){
+            //
+            //echo "登录了";die;
+            return $this->fetch('online');
+        }else{
+           //未登录先登录
+            $this->success('请先登录','/user/login/index');
+            //return $this-$this->redirect('/user/login/index');
+        }
 
-        return $this->fetch('online');
 
     }
 
@@ -61,10 +66,5 @@ class  Onlineweixiu extends Home
         $this->assign('_list', $lists);
         return $this->fetch('notice-detail');
     }
-    Public  function  xiaoquactivity(){
-        echo "小区活动列表";
-    }
-    Public  function  shopactivity(){
-        echo "商家活动列表";
-    }
+
 }

@@ -40,7 +40,7 @@ class  Yezhurenzheng extends Home
         empty($address) && $this->error('联系电话不能为空');
         empty($title) && $this->error('身份证不能为空');
         $a->save($_POST);
-        $this->success('报修订单添加成功！', '/home/index/index');
+        $this->success('业主认证已完成,.即将回到页面首页！', '/home/index/index');
     }
 
 }

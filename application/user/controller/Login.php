@@ -25,6 +25,7 @@ class Login extends Controller {
     }
     /* 登录页面 */
     public function index($username = '', $password = '', $verify = '',$type = 1){
+
         if($this->request->isPost()){ //登录验证
             /* 检测验证码 */
             if(!captcha_check($verify)){
@@ -41,7 +42,7 @@ class Login extends Controller {
                 if($Member->login($uid)){ //登录用户
                     //TODO:跳转到登录前页面
                     if(!$cookie_url = Cookie::get('__forward__')){
-                        $cookie_url = url('Home/Index/index');
+                        $cookie_url = url('home/Index/index');
                     }
                     $this->success('登录成功！',$cookie_url);
                 } else {
@@ -58,7 +59,7 @@ class Login extends Controller {
             }
 
         } else { //显示登录表单
-            return $this->fetch("index1");
+            return $this->fetch("online");
         }
     }
 

@@ -20,7 +20,7 @@ class Index extends Admin  {
      */
     public function index(){ 
         $this->assign('meta_title','管理首页') ;
-        return $this->fetch();
+        return $this->fetch("index");
     }
 
 }

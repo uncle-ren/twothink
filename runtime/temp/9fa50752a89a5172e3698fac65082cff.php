@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:64:"D:\jdk\public/../application/user/view/default/login\index1.html";i:1512057042;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:64:"D:\jdk\public/../application/user/view/default/login\index1.html";i:1512116328;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -82,6 +82,7 @@
                     </div>
                 </div>
             </form>
+            <a href="register">立即注册</a>
         </div>
     </section>
     

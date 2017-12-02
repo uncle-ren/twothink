@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:64:"D:\jdk\public/../application/user/view/default/login\online.html";i:1512128880;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -43,52 +44,64 @@
     </nav>
     <!--导航结束-->
 
-    <div class="span12">
-        <form class="login-form" action="" method="post">
-            <div class="control-group">
+    <div class="container-fluid">
+        <form action="" method="post">
+
+            <div class="form-group">
                 <label class="control-label" for="inputEmail">用户名</label>
                 <div class="controls">
-                    <input type="text" id="inputEmail" class="form-control" name="name" placeholder="请输入用户名"  ajaxurl="/member/checkUserNameUnique.html" errormsg="请填写1-16位用户名" nullmsg="请填写用户名" datatype="*1-16" value="" >
+                    <input type="text" id="inputEmail" class="form-control" placeholder="请输入用户名"  ajaxurl="/member/checkUserNameUnique.html" errormsg="请填写1-16位用户名" nullmsg="请填写用户名" datatype="*1-16" value="" name="username">
                 </div>
             </div>
-            <div class="control-group">
+
+            <div class="form-group">
                 <label class="control-label" for="inputPassword">密码</label>
                 <div class="controls">
-                    <input type="password" id="inputPassword"  placeholder="请输入密码"  errormsg="密码为6-20位" nullmsg="请填写密码" datatype="*6-20" class="form-control" name="tel">
+                    <input type="password" id="inputPassword"  class="form-control" placeholder="请输入密码"  errormsg="密码为6-20位" nullmsg="请填写密码" datatype="*6-20" name="password">
                 </div>
             </div>
-            <div class="control-group">
+
+            <div class="form-group">
                 <label class="control-label" for="inputPassword">验证码</label>
                 <div class="controls">
                     <input type="text" id="inputPassword" class="form-control" placeholder="请输入验证码"  errormsg="请填写5位验证码" nullmsg="请填写验证码" datatype="*5-5" name="verify">
                 </div>
             </div>
-            <div class="control-group">
+
+            <div class="form-group">
                 <label class="control-label"></label>
                 <div class="controls verifyimg">
-                    {:captcha_img()}
+                    <?php echo captcha_img(); ?>
                 </div>
                 <div class="controls Validform_checktip text-warning"></div>
             </div>
-            <div class="control-group">
+
+            <div class="form-group">
                 <div class="controls">
                     <label class="checkbox">
                         <input type="checkbox" name="remember" value="1"> 自动登陆
                     </label>
-                    <button class="btn btn-primary onlineBtn">登录</button>
                 </div>
             </div>
+
+
+            <!--<div class="form-group">-->
+                <!--<div><a href="#"><span class="glyphicon glyphicon-plus onlineUpImg"></span></a></div>-->
+                <!--<label>图片(最多上传5张,可不上传):</label>-->
+            <!--</div>-->
+            <div class="form-group">
+                <button class="btn btn-primary onlineBtn">登录</button>
+            </div>
         </form>
+
     </div>
-
 </div>
+<div class="btn btn-warning"><a href="register">没有账号?点击注册</a></div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="../../index/jquery-1.11.2.min.js"></script>
+<script src="/index/jquery-1.11.2.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="../../index/bootstrap/js/bootstrap.min.js"></script>
-
-{block name="script"}
-<script type="text/javascript" >
+<script src="/index/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
 
     $(document)
         .ajaxStart(function(){
@@ -127,8 +140,5 @@
         });
     });
 </script>
-{/block}
-
-
 </body>
 </html>

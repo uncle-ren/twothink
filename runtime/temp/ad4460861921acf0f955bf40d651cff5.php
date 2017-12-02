@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"D:\jdk\public/../application/user/view/default/login\register.html";i:1512225661;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -85,7 +86,7 @@
       <div class="form-group">
         <label class="control-label"></label>
         <div class="controls verifyimg">
-          {:captcha_img()}
+          <?php echo captcha_img(); ?>
         </div>
         <div class="controls Validform_checktip text-warning"></div>
       </div>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"D:\jdk\public/../application/home/view/default/zushou\zushou.html";i:1512032347;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"D:\jdk\public/../application/home/view/default/zushou\zushou.html";i:1512090481;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -64,7 +64,7 @@
                                     <h4><?php echo $vo['title']; ?></h4>
                                     <p class="zushouInfo"><?php echo $vo['description']; ?></p>
                                     <p class="text-danger">1900元/月</p>
-                                    <p><a href="zushou-detail.html" class="btn btn-danger zushouBtn">详细信息</a> </p>
+                                    <p><a href="noticedetail?id=<?php echo $vo['id']; ?>" class="btn btn-danger zushouBtn">详细信息</a> </p>
                                 </div>
                             </div>
                         </div>
@@ -86,7 +86,7 @@
                                     <h4><?php echo $vol['title']; ?></h4>
                                     <p class="zushouInfo"><?php echo $vol['description']; ?></p>
                                     <p class="text-danger">1900元/月</p>
-                                    <p><a class="btn btn-danger zushouBtn">详细信息</a> </p>
+                                    <p><a class="btn btn-danger zushouBtn" href="noticedetail?id=<?php echo $vol['id']; ?>">详细信息</a> </p>
                                 </div>
                             </div>
                         </div>

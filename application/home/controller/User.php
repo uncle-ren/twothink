@@ -8,7 +8,9 @@ class  User extends Home
         //判断是否已经登录
         if(is_login()){
             //成立则已经登录
-            echo 1;
+           echo  "这是个人中心!!　　　　　　";
+
+           echo "<a href='/user/login/logout'>注销</a>";
         }else{
             //不成立则跳转到登录界面
             $this->redirect('login');
@@ -17,28 +19,13 @@ class  User extends Home
 
 
     public  function login(){
-        //echo 1; die;
-        return $this->fetch('online');
-    }
-    public   function savelogin(){
-        $this->success('登录成功！',url('index/index'));
+
+
+        return $this-$this->redirect('/user/login/index');
+        //return $this->fetch('online');
     }
 
-    Public function regist(){
-        //注册
-        return $this->fetch('register');
-    }
-    Public function save(){
-
-        //注册后的保存
-       // var_dump($_POST);die;
-        if($_POST["password"] != $_POST["repassword"]){
-            $this->error('两次输入密码不一致');
-        }
-        //var_dump($_POST);die;
-        unset($_POST["repassword"]);
-        unset($_POST["verify"]);
-        $this->save($_POST);
+    Public function test(){
 
     }
 
